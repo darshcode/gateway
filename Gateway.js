@@ -49,10 +49,6 @@ const gateway = new ApolloGateway({
     subgraphs: [
       { name: "health", url: HEALTH_SERVICE_URL },
       { name: "ai", url: AI_SERVICE_URL },
-      {
-        name: "auth",
-        url: process.env.AUTH_SERVICE_URL || "http://localhost:4002/graphql",
-      },
     ],
     pollIntervalInMs: 30000, // Check for updates every 30 seconds
   }),
